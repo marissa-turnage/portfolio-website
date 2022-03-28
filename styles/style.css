@@ -471,6 +471,52 @@ template {
   font-size: 30px;
   font-family: "skylar_sansbold", "Lucida Bright", serif;
   padding: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#home-work .tile-hover::after {
+  content: "";
+  background-image: url("../images/projects/diani-home.png");
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1 !important;
+  z-index: -999;
+}
+
+#home-work #home-diani, #home-work #home-he, #home-work #home-regen, #home-work #home-hernandez {
+  position: relative;
+}
+
+#home-work #home-diani::after, #home-work #home-he::after, #home-work #home-regen::after, #home-work #home-hernandez::after {
+  content: "";
+  background-image: url("../images/projects/diani-home.png");
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -999;
+}
+
+#home-work #home-he::after {
+  background-image: url("../images/projects/he-home.png");
+}
+
+#home-work #home-regen::after {
+  background-image: url("../images/projects/regen-home.png");
+}
+
+#home-work #home-hernandez::after {
+  background-image: url("../images/projects/hernandez-home.png");
 }
 
 @media only screen and (max-width: 864px) {

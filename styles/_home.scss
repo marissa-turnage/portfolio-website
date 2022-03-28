@@ -16,7 +16,6 @@
         border-bottom: 1px solid $night-sky;
     }   
 }
-
 @media only screen and (max-width: $medium-desktop) {
     #hero {
         #hero-txt {
@@ -111,6 +110,56 @@
             font-size: 30px;
             font-family: $heading-bold;
             padding: 10px;
+            transition: all .3s;
+        }
+    }
+    .tile-hover {
+        &::after {
+            content: "";
+            background-image: url("../images/projects/diani-home.png");
+            background-size: cover;
+            background-position: top center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 1!important;
+            z-index: -999;
+        }
+    }
+    #home-diani {
+        position: relative;
+        &::after {
+            content: "";
+            background-image: url("../images/projects/diani-home.png");
+            background-size: cover;
+            background-position: top center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.2;
+            z-index: -999;
+        }
+    }
+    #home-he {
+        @extend #home-diani;
+        &::after {
+            background-image: url("../images/projects/he-home.png");
+        }
+    }
+    #home-regen {
+        @extend #home-diani;
+        &::after {
+            background-image: url("../images/projects/regen-home.png");
+        }
+    }
+    #home-hernandez {
+        @extend #home-diani;
+        &::after {
+            background-image: url("../images/projects/hernandez-home.png");
         }
     }
 }
