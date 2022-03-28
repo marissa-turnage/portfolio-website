@@ -1,0 +1,42 @@
+#work-grid {
+    padding-top: 100px; 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    section {
+        border-bottom: 1px solid $night-sky;
+        border-right: 1px solid $night-sky;
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+        h3 {
+            padding: 20px 20px 5px 20px;
+            margin: 0;
+            font-size: 28px;
+        }
+        p {
+            padding: 0px 20px 20px 20px;
+            margin: 0;
+        }
+    }
+}
+@media only screen and (max-width: $small-desktop) {
+    #work-grid {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media only screen and (max-width: $large-mobile) {
+    #work-grid {
+        grid-template-columns: 100%;
+        section {
+            h3 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}

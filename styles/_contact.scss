@@ -1,0 +1,22 @@
+#contact-hero {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 100px;
+    height: 85vh;
+    #contact-text {
+        border-right: 1px solid $night-sky;
+        padding: 10% 10% 10% 10%;
+        border-bottom: 1px solid $night-sky;
+        h1 {
+            margin: 0 2.5% 20px;
+        }
+        p {
+            margin: 0 0 30px;
+        }
+    }
+    #contact-img {
+        background-image: url("/images/sky-bg.jpg");
+        background-size: cover;
+        border-bottom: 1px solid $night-sky;
+    }
+}

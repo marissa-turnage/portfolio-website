@@ -1,0 +1,50 @@
+#about-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 100px;
+    section.about-text {
+        padding: 10%;
+        h1 {
+            margin: 0;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    #about-portrait {
+        background-image: url("../images/profile.jpg");
+        background-size: cover;
+    }
+    #about-experience {
+        grid-column: 1 / span 2;
+        height: max-content;
+        border-top: 1px solid $night-sky;
+        border-bottom: 1px solid $night-sky;
+        background-color: $glacier;
+        padding: 5%;
+        text-align: center;
+        h2 {
+            margin: 0;
+        }
+        #experience-grid {
+            max-width: 1380px;
+            display: grid;
+            grid-template-columns: 25% 15% 60%;
+            text-align: left;
+            margin: 0 auto 30px auto;
+            p {
+                padding: 1%;
+            }
+        }
+    }
+    #about-violin {
+        background-image: url("../images/violin1.jpg");
+        background-size: cover;
+    }
+    #violin-text {
+        margin-bottom: 300px;
+        h2 {
+            margin: 0;
+        }
+    }
+}

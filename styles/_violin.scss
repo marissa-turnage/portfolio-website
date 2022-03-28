@@ -1,0 +1,83 @@
+#violin-hero {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 100px;
+    #violin-bio {
+        border-right: 1px solid $night-sky;
+        padding: 10% 10% 10% 10%;
+        border-bottom: 1px solid $night-sky;
+        h1 {
+            margin: 0 2.5% 20px;
+        }
+        p {
+            margin: 0 0 30px;
+        }
+    }
+    #violin-img {
+        background-image: url("/images/sky-bg.jpg");
+        background-size: cover;
+        border-bottom: 1px solid $night-sky;
+    }
+}
+
+#violin-recordings {
+    padding: 5%;
+    h2 {
+        text-align: center;
+    }
+    #song-tiles {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 50% 50%;
+        .song-tile {
+            padding: 5%;
+            h3 {
+                font-size: 1.5em;
+            }
+            p {
+                font-style: italic;
+            }
+            a {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+#violin-rates {
+    padding: 5%;
+    text-align: center;
+    border-top: 1px solid $night-sky;
+    background-color: $glacier;
+    p {
+        max-width: 50%;
+        margin: 20px auto 0;
+    }
+}
+
+#violin-performances {
+    border-top: 1px solid $night-sky;
+    padding: 5%;
+    h2 {
+        text-align: center;
+    }
+    #perf-tiles {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 50% 50%;
+        .perf-tile {
+            padding: 5%;
+            h3 {
+                font-size: 1.5em;
+            }
+            p {
+                font-style: italic;
+            }
+            a {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+    }
+}
