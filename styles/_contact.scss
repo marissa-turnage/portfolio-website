@@ -17,6 +17,21 @@
     #contact-img {
         background-image: url("/images/sky-bg.jpg");
         background-size: cover;
+        background-position: center center;
         border-bottom: 1px solid $night-sky;
+    }
+}
+@media only screen and (max-width: $tablet) {
+    #contact-hero {
+        display: block;
+        #contact-text {
+            border-bottom: none;
+            h1 {
+                font-size: 6em;
+            }
+        }
+        #contact-img {
+            height: 200px;
+        }
     }
 }

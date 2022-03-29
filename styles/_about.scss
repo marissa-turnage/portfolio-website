@@ -14,6 +14,7 @@
     #about-portrait {
         background-image: url("../images/profile.jpg");
         background-size: cover;
+        background-position: top right;
     }
     #about-experience {
         grid-column: 1 / span 2;
@@ -35,16 +36,70 @@
             p {
                 padding: 1%;
             }
+            p.job-title {
+                font-weight: 700;
+            }
+            p.job-date {
+                font-style: italic;
+            }
         }
     }
     #about-violin {
         background-image: url("../images/violin1.jpg");
         background-size: cover;
+        background-position: bottom center;
     }
     #violin-text {
-        margin-bottom: 300px;
+        padding-bottom: 300px;
         h2 {
             margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    #about-grid {
+        display: block;
+        section.about-text {
+            padding: 5%;
+            border-bottom: 1px solid $night-sky;
+        }
+        #about-portrait {
+            height: 550px;
+        }
+        #about-experience {
+            #experience-grid {
+                grid-template-columns: 100%;
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+                p.job-title {
+                    margin-top: 20px;
+                }
+            }
+        }
+        #about-violin {
+            height: 400px;
+        }
+        #violin-text {
+            padding-bottom: 100px;
+        }
+    }
+}
+@media only screen and (max-width: $large-mobile) {
+    #about-grid {
+        section.about-text {
+            padding: 8%;
+        }
+        #about-portrait {
+            height: 300px;
+        }
+        #about-experience {
+            padding: 8% 8% 10% 8%;
+        }
+        #about-violin {
+            height: 300px;
         }
     }
 }

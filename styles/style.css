@@ -363,6 +363,7 @@ template {
 #hero #hero-img {
   background-image: url("/images/sky-bg.jpg");
   background-size: cover;
+  background-position: center center;
   border-bottom: 1px solid #52517B;
 }
 
@@ -456,67 +457,42 @@ template {
   border-bottom: 1px solid #52517B;
 }
 
-#home-work section {
-  border-right: 1px solid #52517B;
-  height: 300px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#home-work a {
+  text-decoration: none;
 }
 
-#home-work section a {
-  text-decoration: none;
-  font-size: 30px;
-  font-family: "skylar_sansbold", "Lucida Bright", serif;
-  padding: 10px;
+#home-work section {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-right: 1px solid #52517B;
+}
+
+#home-work img {
+  width: 100%;
   -webkit-transition: all .3s;
   transition: all .3s;
+  opacity: .2;
 }
 
-#home-work .tile-hover::after {
-  content: "";
-  background-image: url("../images/projects/diani-home.png");
-  background-size: cover;
-  background-position: top center;
+#home-work img:hover {
+  opacity: .7;
+}
+
+#home-work p {
+  font-size: 30px;
+  margin: 0;
+  font-family: "skylar_sansbold", "Lucida Bright", serif;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 1 !important;
-  z-index: -999;
+  top: 48%;
+  left: 2%;
+  right: 2%;
 }
 
-#home-work #home-diani, #home-work #home-he, #home-work #home-regen, #home-work #home-hernandez {
-  position: relative;
-}
-
-#home-work #home-diani::after, #home-work #home-he::after, #home-work #home-regen::after, #home-work #home-hernandez::after {
-  content: "";
-  background-image: url("../images/projects/diani-home.png");
-  background-size: cover;
-  background-position: top center;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-  z-index: -999;
-}
-
-#home-work #home-he::after {
-  background-image: url("../images/projects/he-home.png");
-}
-
-#home-work #home-regen::after {
-  background-image: url("../images/projects/regen-home.png");
-}
-
-#home-work #home-hernandez::after {
-  background-image: url("../images/projects/hernandez-home.png");
+#home-work p:hover {
+  color: #6E8AA7;
 }
 
 @media only screen and (max-width: 864px) {
@@ -529,6 +505,9 @@ template {
     border-bottom: 1px solid #52517B;
     height: 200px;
   }
+  #home-work section p {
+    top: 45%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -540,8 +519,9 @@ template {
     height: 100px;
     border-right: none;
   }
-  #home-work section a {
-    font-size: 24px;
+  #home-work section p {
+    top: 38%;
+    font-size: 2em;
   }
 }
 
@@ -633,6 +613,7 @@ template {
 #about-grid #about-portrait {
   background-image: url("../images/profile.jpg");
   background-size: cover;
+  background-position: top right;
 }
 
 #about-grid #about-experience {
@@ -667,17 +648,71 @@ template {
   padding: 1%;
 }
 
+#about-grid #about-experience #experience-grid p.job-title {
+  font-weight: 700;
+}
+
+#about-grid #about-experience #experience-grid p.job-date {
+  font-style: italic;
+}
+
 #about-grid #about-violin {
   background-image: url("../images/violin1.jpg");
   background-size: cover;
+  background-position: bottom center;
 }
 
 #about-grid #violin-text {
-  margin-bottom: 300px;
+  padding-bottom: 300px;
 }
 
 #about-grid #violin-text h2 {
   margin: 0;
+}
+
+@media only screen and (max-width: 864px) {
+  #about-grid {
+    display: block;
+  }
+  #about-grid section.about-text {
+    padding: 5%;
+    border-bottom: 1px solid #52517B;
+  }
+  #about-grid #about-portrait {
+    height: 550px;
+  }
+  #about-grid #about-experience #experience-grid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  #about-grid #about-experience #experience-grid p {
+    padding: 0;
+    margin: 0;
+  }
+  #about-grid #about-experience #experience-grid p.job-title {
+    margin-top: 20px;
+  }
+  #about-grid #about-violin {
+    height: 400px;
+  }
+  #about-grid #violin-text {
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #about-grid section.about-text {
+    padding: 8%;
+  }
+  #about-grid #about-portrait {
+    height: 300px;
+  }
+  #about-grid #about-experience {
+    padding: 8% 8% 10% 8%;
+  }
+  #about-grid #about-violin {
+    height: 300px;
+  }
 }
 
 #contact-hero {
@@ -706,7 +741,23 @@ template {
 #contact-hero #contact-img {
   background-image: url("/images/sky-bg.jpg");
   background-size: cover;
+  background-position: center center;
   border-bottom: 1px solid #52517B;
+}
+
+@media only screen and (max-width: 864px) {
+  #contact-hero {
+    display: block;
+  }
+  #contact-hero #contact-text {
+    border-bottom: none;
+  }
+  #contact-hero #contact-text h1 {
+    font-size: 6em;
+  }
+  #contact-hero #contact-img {
+    height: 200px;
+  }
 }
 
 #violin-hero {
@@ -724,7 +775,7 @@ template {
 }
 
 #violin-hero #violin-bio h1 {
-  margin: 0 2.5% 20px;
+  margin: 0 0 20px;
 }
 
 #violin-hero #violin-bio p {
@@ -734,7 +785,23 @@ template {
 #violin-hero #violin-img {
   background-image: url("/images/sky-bg.jpg");
   background-size: cover;
+  background-position: center center;
   border-bottom: 1px solid #52517B;
+}
+
+@media only screen and (max-width: 864px) {
+  #violin-hero {
+    display: block;
+  }
+  #violin-hero #violin-bio {
+    border-right: none;
+  }
+  #violin-hero #violin-bio h1 {
+    font-size: 3em;
+  }
+  #violin-hero #violin-img {
+    height: 200px;
+  }
 }
 
 #violin-recordings {
@@ -770,6 +837,12 @@ template {
   margin-top: 5px;
 }
 
+@media only screen and (max-width: 700px) {
+  #violin-recordings #song-tiles {
+    display: block;
+  }
+}
+
 #violin-rates {
   padding: 5%;
   text-align: center;
@@ -778,8 +851,14 @@ template {
 }
 
 #violin-rates p {
-  max-width: 50%;
+  max-width: 60%;
   margin: 20px auto 0;
+}
+
+@media only screen and (max-width: 864px) {
+  #violin-rates p {
+    max-width: 90%;
+  }
 }
 
 #violin-performances {
@@ -814,6 +893,18 @@ template {
 #violin-performances #perf-tiles .perf-tile a {
   display: block;
   margin-top: 5px;
+}
+
+@media only screen and (max-width: 864px) {
+  #violin-performances {
+    margin-bottom: 50px;
+  }
+  #violin-performances #perf-tiles {
+    display: block;
+  }
+  #violin-performances #perf-tiles .perf-tile {
+    padding: 2%;
+  }
 }
 
 /* Firefox */

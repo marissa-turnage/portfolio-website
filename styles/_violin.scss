@@ -7,7 +7,7 @@
         padding: 10% 10% 10% 10%;
         border-bottom: 1px solid $night-sky;
         h1 {
-            margin: 0 2.5% 20px;
+            margin: 0 0 20px;
         }
         p {
             margin: 0 0 30px;
@@ -16,7 +16,22 @@
     #violin-img {
         background-image: url("/images/sky-bg.jpg");
         background-size: cover;
+        background-position: center center;
         border-bottom: 1px solid $night-sky;
+    }
+}
+@media only screen and (max-width: $tablet) {
+    #violin-hero {
+        display: block;
+        #violin-bio {
+            border-right: none;
+            h1 {
+                font-size: 3em;
+            }
+        }
+        #violin-img {
+            height: 200px;
+        }
     }
 }
 
@@ -44,6 +59,13 @@
         }
     }
 }
+@media only screen and (max-width: 700px) {
+    #violin-recordings {
+        #song-tiles {
+            display: block;
+        }
+    }
+}
 
 #violin-rates {
     padding: 5%;
@@ -51,8 +73,15 @@
     border-top: 1px solid $night-sky;
     background-color: $glacier;
     p {
-        max-width: 50%;
+        max-width: 60%;
         margin: 20px auto 0;
+    }
+}
+@media only screen and (max-width: $tablet) {
+    #violin-rates {
+        p {
+            max-width: 90%;
+        }
     }
 }
 
@@ -77,6 +106,17 @@
             a {
                 display: block;
                 margin-top: 5px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $tablet) {
+    #violin-performances {
+        margin-bottom: 50px;
+        #perf-tiles {
+            display: block;
+            .perf-tile {
+                padding: 2%;
             }
         }
     }
