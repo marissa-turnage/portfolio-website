@@ -13,5 +13,13 @@ $(function() {
         }
     });
     
-    
+    // HOME HOVER EFFECTS
+    let $tiles = $("#home-work a section");
+    $tiles
+        .on("mouseenter", function() {
+            $(this).find("p").fadeOut(50);
+        })
+        .on("mouseleave", function() {
+            $(this).find("p").fadeIn(50);
+        });
 });

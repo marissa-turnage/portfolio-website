@@ -5,8 +5,14 @@
     section {
         border-bottom: 1px solid $night-sky;
         border-right: 1px solid $night-sky;
+        overflow: hidden;
         img {
             max-width: 100%;
+            border-bottom: 1px solid $night-sky;
+            transition: all .5s;
+            &:hover {
+                opacity: 0.5;
+            }
         }
         a {
             text-decoration: none;
@@ -15,6 +21,11 @@
             padding: 20px 20px 5px 20px;
             margin: 0;
             font-size: 28px;
+            transition: all .3s;
+            &:hover {
+                color: $bluebird;
+                transform: translateY(-5px);
+            }
         }
         p {
             padding: 0px 20px 20px 20px;

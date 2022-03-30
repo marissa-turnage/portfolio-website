@@ -104,7 +104,7 @@ main {
     margin: 0 auto;
 }
 
-.button {
+a.button {
     text-decoration: none;
     transition: all .2s;
     cursor: pointer;
@@ -127,6 +127,7 @@ header {
     width: 100%;
     border-bottom: 1px solid $night-sky;
     background-color: $macaron;
+    z-index: 999;
     nav {
         width: 100%;
         height: 100px;
@@ -134,20 +135,21 @@ header {
         justify-content: space-between;
         align-items: center;
         font-size: 16px!important;
-        img {
-            padding: 20px;
-            width: 100px;
+        a img {
+            padding: 20px 0px 0px 20px;
+            width: 100%;
         }
         ul {
             list-style-type: none;
-            padding-inline-start: 130px;
+            padding-inline-start: 0px;
+            padding-inline-end: 60px;
             a {
                text-decoration: none;
                font-size: 16px!important;
             }
             li {
                 display: inline-flex;
-                padding: 20px;
+                padding: 18px;
                 border: 1px solid $macaron;
                 transition: all .3s;
                 &:hover {
@@ -164,7 +166,7 @@ header {
         }
         a.button {
             @extend button;
-            margin-right: 20px;
+            margin-right: 24px;
             &::after {
                 content: ' ⇢';
             }
@@ -176,14 +178,14 @@ header {
 .unhide {
     display: block!important;
 }
-@media only screen and (max-width: $tablet) {
+@media only screen and (max-width: 960px) {
     header {
         nav{
             // showing hamburger menu
             #hamburger {
                 display: block;
                 width: 30px;
-                margin-right: 10px;
+                margin-right: 20px;
                 cursor: pointer;
             }
             ul {
@@ -219,6 +221,16 @@ header {
                 position: absolute;
                 right: 0;
                 top: 290px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $large-mobile) {
+    header {
+        nav {
+            a img {
+                width: 80%;
+                padding: 20px 0px 0px 20px;
             }
         }
     }
