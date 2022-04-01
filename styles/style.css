@@ -412,36 +412,36 @@ template {
   }
 }
 
-#home-cta, #home-contact {
+#home-cta, #home-contact, #work-disclaimer {
   text-align: center;
   border-bottom: 1px solid #52517B;
   background-color: #BDCCD4;
   padding: 5%;
 }
 
-#home-cta h2, #home-contact h2 {
+#home-cta h2, #home-contact h2, #work-disclaimer h2 {
   margin: 0 auto;
 }
 
-#home-cta p, #home-contact p {
+#home-cta p, #home-contact p, #work-disclaimer p {
   max-width: 70%;
   margin: 20px auto 40px;
 }
 
 @media only screen and (max-width: 864px) {
-  #home-cta, #home-contact {
+  #home-cta, #home-contact, #work-disclaimer {
     padding: 7% 5% 9% 5%;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  #home-cta, #home-contact {
+  #home-cta, #home-contact, #work-disclaimer {
     padding: 10% 5% 12% 5%;
   }
-  #home-cta h2, #home-contact h2 {
+  #home-cta h2, #home-contact h2, #work-disclaimer h2 {
     text-align: center;
   }
-  #home-cta p, #home-contact p {
+  #home-cta p, #home-contact p, #work-disclaimer p {
     text-align: center;
     max-width: 100%;
     margin: 0 auto 20px;
@@ -521,16 +521,16 @@ template {
   }
 }
 
-#home-contact {
+#home-contact, #work-disclaimer {
   background-color: #D9BBBD;
   margin-bottom: 50px;
 }
 
-#home-contact a::after {
+#home-contact a::after, #work-disclaimer a::after {
   content: " ↝";
 }
 
-#home-contact a:hover {
+#home-contact a:hover, #work-disclaimer a:hover {
   background-color: #BDCCD4;
 }
 
@@ -600,6 +600,19 @@ template {
   #work-grid section p {
     font-size: 12px;
   }
+}
+
+#work-disclaimer {
+  margin-bottom: 0;
+  padding: 1%;
+  background-color: #BDCCD4;
+}
+
+#work-disclaimer p {
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
 }
 
 #about-grid {

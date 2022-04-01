@@ -51,3 +51,16 @@
         }
     }
 }
+
+#work-disclaimer {
+    @extend #home-contact;
+    margin-bottom: 0;
+    padding: 1%;
+    background-color: $glacier;
+    p {
+        margin: 0 auto;
+        text-align: center;
+        font-style: italic;
+        font-size: 12px;
+    }
+}
