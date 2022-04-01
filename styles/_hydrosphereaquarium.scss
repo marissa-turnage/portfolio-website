@@ -1,0 +1,13 @@
+#hydro-project-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+    img {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: $large-mobile) {
+    #hydro-project-grid {
+        grid-template-columns: 100%;
+    }
+}

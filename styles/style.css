@@ -919,6 +919,54 @@ template {
   }
 }
 
+.project-text {
+  padding: 150px 0 0 0;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 580px) {
+  .project-text {
+    padding-top: 125px;
+  }
+  .project-text h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .project-text {
+    padding-top: 120px;
+  }
+  .project-text h1 {
+    font-size: 2em;
+  }
+}
+
+.project-img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#hydro-project-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin-bottom: 50px;
+}
+
+#hydro-project-grid img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  #hydro-project-grid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
 /* Firefox */
 * {
   scrollbar-width: auto;
