@@ -170,7 +170,6 @@ header {
             display: none;
         }
         a.button {
-            @extend button;
             margin-right: 24px;
             border-radius: 0;
             -webkit-border-radius: 0;
