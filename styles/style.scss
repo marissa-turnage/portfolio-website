@@ -113,6 +113,9 @@ a.button {
     padding: 10px 15px;
     background-color:rgba(255, 255, 255, 0);
     border: 1px solid $night-sky;
+    display: block;
+    border-radius: 0;
+    -webkit-border-radius: 0;
     &:hover {
         background-color: $rose;
         color: $bluebird;
