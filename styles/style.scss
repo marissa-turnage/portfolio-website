@@ -165,6 +165,9 @@ header {
                 }
                 
             }
+            li.active {
+                border-bottom: 1px solid $bluebird;
+            }
         }
         #hamburger {
             display: none;

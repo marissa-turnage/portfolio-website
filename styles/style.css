@@ -1170,6 +1170,10 @@ header nav ul li:hover {
   cursor: pointer;
 }
 
+header nav ul li.active {
+  border-bottom: 1px solid #6E8AA7;
+}
+
 header nav #hamburger {
   display: none;
 }
