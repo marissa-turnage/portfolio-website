@@ -1231,8 +1231,8 @@ header nav a.button::after {
 
 @media only screen and (max-width: 450px) {
   header nav a img {
-    width: 80%;
-    padding: 20px 0px 0px 20px;
+    width: 200px;
+    padding: 10px 0px 0px 20px;
   }
 }
 
