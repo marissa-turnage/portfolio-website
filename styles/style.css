@@ -386,12 +386,14 @@ template {
   }
   #hero #hero-text {
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row: 2;
+    grid-row-start: 2;
     border-right: none;
   }
   #hero #hero-img {
     -ms-grid-row: 1;
-        grid-row-start: 1;
+    grid-row: 1;
+    grid-row-start: 1;
     height: 250px;
   }
 }
@@ -1297,5 +1299,10 @@ footer small {
     font-size: 8px;
     padding: 5px 5px 5px 0px;
   }
+}
+
+* {
+  border-radius: 0;
+  -webkit-border-radius: 0;
 }
 /*# sourceMappingURL=style.css.map */
